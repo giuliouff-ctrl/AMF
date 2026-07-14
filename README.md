@@ -1,45 +1,172 @@
-# AMF — AI Multi-Agent Framework
+# 🤖 AI Multi-Agent Framework (AMF)
 
-| Field | Value |
-|---|---|
-| ID | ROOT-02 |
-| Document | README.md |
-| Module | root |
-| Class | S — Stable spec (non-normative content) |
-| Version | 1.0.0 |
-| Status | ACTIVE |
-| Owner | Human Owner |
-| Maintainer | Orchestrator |
-| Authority | None — human-facing introduction. Everything stated here is owned, normatively, elsewhere. |
+<p align="center">
+
+**An open-source operating framework for AI-native software engineering.**
+
+Design, orchestrate and standardize AI software development through specialized agents, engineering workflows, persistent knowledge and structured documentation.
+
+</p>
 
 ---
 
-**AMF v1.0.0** turns an AI coding agent (Claude Code today) into a structured engineering organization for real software projects: sites, web apps, tools.
+# 📖 Overview
 
-Instead of one assistant improvising, you get:
+AI Multi-Agent Framework (**AMF**) is an open-source framework designed to organize AI-assisted software development through standardized engineering practices, specialized AI roles and persistent project knowledge.
 
-- **Seven roles** — Orchestrator, Product Analyst, Architect, Engineer, Reviewer, QA Engineer, Release Manager — with explicit authority and hard prohibitions. The one that writes code never approves it; nothing deploys without your yes.
-- **A memory that survives sessions** — every project gets a `.amf/` folder: status, tasks, decisions with their rationale, session logs, handovers. A brand-new session reads a handful of files and continues exactly where the last one stopped.
-- **Decisions with a paper trail** — three classes: routine ones just happen, structural ones get recorded with alternatives and rationale, and anything irreversible or costly waits for you.
-- **Objective quality gates** — work passes seven binary checkpoints (requirements → design → build → review → verify → record → release). "Mostly done" doesn't exist.
-- **Three sizes** — Minimal (a restaurant site: 8 documents, 3 roles), Standard (a client app), Full (a long-running product). Same rules, proportional paper.
+Instead of treating AI as a single assistant, AMF defines a structured operating model where specialized agents collaborate using shared documentation, well-defined workflows and consistent engineering standards.
 
-## Try it
-
-1. Read the 5-minute tour: [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md)
-2. See it at project scale: the dry-run in [operations/ADOPTION_GUIDE.md §7](operations/ADOPTION_GUIDE.md)
-3. Adopt it: [operations/ADOPTION_GUIDE.md](operations/ADOPTION_GUIDE.md) → your first session runs [workflows/WF_NEW_PROJECT.md](workflows/WF_NEW_PROJECT.md)
-
-Everything else: [AMF_MANIFEST.md](AMF_MANIFEST.md) — the entry point and full document registry.
+The framework is model-agnostic and can be adopted with modern AI development tools and coding assistants.
 
 ---
 
-## Revision History
+# 🚀 Why AMF?
 
-| Version | Date | Author | Change |
-|---|---|---|---|
-| 1.0.0 | 2026-07-12 | Architect (AI), Phase 8 | Initial README at release v1.0.0 |
+As software projects grow, AI-assisted development often faces challenges such as:
 
-## Future Extension Notes
+* ❌ Loss of context between sessions
+* ❌ Inconsistent architectural decisions
+* ❌ Poor or missing documentation
+* ❌ Unstructured development workflows
+* ❌ Undefined responsibilities
+* ❌ Difficulty maintaining long-term projects
+* ❌ Repeated work caused by missing project knowledge
 
-Stays short forever; anything growing here belongs in the Manifest or the Overview.
+AMF provides a structured framework to address these challenges through documentation, governance and standardized collaboration.
+
+---
+
+# 🎯 Core Principles
+
+AMF is built around the following principles:
+
+* 📚 Documentation First
+* 🧠 Knowledge-Driven Development
+* 🔄 Standardized Engineering Workflows
+* 🤝 Specialized AI Roles
+* 🎯 Clear Responsibilities
+* 💾 Persistent Project Knowledge
+* ♻️ Reproducible Processes
+* ✅ Quality Assurance
+* 🏛️ Governance and Validation
+* 🛠️ Long-Term Maintainability
+
+---
+
+# 📦 What's Included
+
+AMF v1.0.0 includes the complete framework specification composed of the following systems:
+
+### 🏗️ Core Foundation
+
+Defines the principles, terminology, governance model and operational philosophy of the framework.
+
+### 🧠 Knowledge & Context Management
+
+Provides standards for maintaining persistent project knowledge, documentation lifecycle, decision history and context continuity.
+
+### 🤖 Multi-Agent Operating System
+
+Defines specialized agent roles, responsibilities, collaboration rules and communication patterns.
+
+### ⚙️ Workflow Engine
+
+Standardizes project execution through repeatable engineering workflows covering planning, development, reviews, testing and documentation.
+
+### 📏 Engineering Standards
+
+Establishes coding, documentation, architecture and quality standards used throughout the framework.
+
+### 📄 Template & Schema System
+
+Provides reusable templates and standardized document structures to ensure consistency across projects.
+
+### 👥 Professional Agent Library
+
+Defines specialized AI roles for product management, architecture, engineering, quality assurance, operations and project coordination.
+
+### 📚 Operational Playbooks
+
+Documents repeatable procedures for common engineering activities such as feature development, bug resolution, reviews, releases and maintenance.
+
+### 🛡️ Governance & Validation
+
+Defines framework governance, validation procedures, audit processes, quality control and continuous consistency checks.
+
+### 🧪 Reference Implementation Guidelines
+
+Describes how AMF should be applied consistently within software projects.
+
+---
+
+# 📁 Repository Structure
+
+```text
+AMF/
+│
+├── core/
+├── governance/
+├── knowledge/
+├── workflows/
+├── standards/
+├── templates/
+├── agents/
+├── playbooks/
+├── validation/
+├── examples/
+├── docs/
+└── changelog/
+```
+
+---
+
+# 💡 Framework Philosophy
+
+AMF separates software engineering into clearly defined responsibilities.
+
+Rather than asking one AI assistant to perform every task, the framework organizes development through specialized roles, structured workflows and shared project knowledge.
+
+This approach improves consistency, documentation quality, maintainability and collaboration across the entire project lifecycle.
+
+---
+
+# 📌 Project Status
+
+**Version:** `v1.0.0`
+
+**Status:** 🟢 Stable
+
+This release represents the first complete specification of the AI Multi-Agent Framework.
+
+It includes the framework architecture, engineering standards, governance model, workflows, templates, agent system and operational documentation.
+
+---
+
+# 👨‍💻 Who Is AMF For?
+
+AMF is intended for:
+
+* 💻 Software Engineers
+* 🤖 AI Developers
+* 👥 Technical Teams
+* 📦 Product Teams
+* 🚀 SaaS Founders
+* 🌍 Open Source Projects
+* 🏢 Engineering Organizations
+* 🛠️ Anyone building software with AI assistance
+
+---
+
+# ❤️ Contributing
+
+Contributions are welcome.
+
+If you would like to improve the framework, propose architectural changes or contribute additional workflows, documentation or standards, please open an issue before submitting major changes.
+
+---
+
+# 📜 License
+
+Licensed under the **Apache License 2.0**.
+
+See the **LICENSE** file for more information.
