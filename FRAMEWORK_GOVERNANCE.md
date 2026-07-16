@@ -6,7 +6,7 @@
 | Document | FRAMEWORK_GOVERNANCE.md |
 | Module | core |
 | Class | C — Constitutional |
-| Version | 1.0.5 |
+| Version | 1.0.6 |
 | Status | ACTIVE |
 | Owner | Human Owner |
 | Maintainer | Architect |
@@ -76,7 +76,8 @@ Rules:
 | quality/* (4 documents) | QA Engineer (content), Architect (model) | Architect |
 | workflows/* (12 documents) | Orchestrator (content), Architect (structure) | Orchestrator |
 | operations/* (8 documents) | Release Manager (content), Architect (profiles/audit) | Release Manager |
-| AMF_MANIFEST.md, README.md | Orchestrator / Human Owner | Orchestrator |
+| AMF_MANIFEST.md, README.md, QUICK_START.md, CHANGELOG.md | Orchestrator / Human Owner | Orchestrator |
+| SCHEMA_REGISTRY.md | Architect | Architect |
 
 The authoritative document registry lives in [AMF_MANIFEST.md](../AMF_MANIFEST.md); this table is its ownership view.
 
@@ -139,6 +140,7 @@ Governance guarantees the process side of compatibility: no D3 change ships with
 | 1.0.3 | 2026-07-12 | Architect (AI), Phase 4-5 | Registry: communication and quality delivered; swept references (R8.3) |
 | 1.0.4 | 2026-07-12 | Architect (AI), Phase 8 | Swept Phase 6-8 forward references to live links (R8.3) |
 | 1.0.5 | 2026-07-13 | Architect (AI), Phases 8-10 | Registry: operations grew to 8 documents (playbooks, audit, certification) |
+| 1.0.6 | 2026-07-16 | Architect (AI), v1.1.0 | Registry: root docs grew (QUICK_START, CHANGELOG, SCHEMA_REGISTRY) |
 
 ## Future Extension Notes
 

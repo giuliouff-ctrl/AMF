@@ -6,7 +6,7 @@
 | Document | FRAMEWORK_AUDIT.md |
 | Module | operations |
 | Class | S — Stable spec |
-| Version | 1.0.0 |
+| Version | 1.1.1 |
 | Status | ACTIVE |
 | Owner | Architect (audit design) / Release Manager (execution cadence) |
 | Maintainer | Architect |
@@ -41,7 +41,7 @@ The brief-level boards (governance board, architecture board, standards committe
 
 ## 2. Validation Checks (machine-checkable)
 
-The framework's invariants, each an instance of the [SCHEMA_REGISTRY.md §4](../SCHEMA_REGISTRY.md) taxonomy. All are executable by script today and are the intended `amf lint` rule set (AD-7):
+The framework's invariants, each an instance of the [SCHEMA_REGISTRY.md §4](../SCHEMA_REGISTRY.md) taxonomy. All are **executable now** via `python3 tools/amf-lint.py` — the shipped validator that implements V1–V11 (AD-7 realized):
 
 | # | Check | Kind | Pass criterion |
 |---|---|---|---|
@@ -55,6 +55,7 @@ The framework's invariants, each an instance of the [SCHEMA_REGISTRY.md §4](../
 | V8 | Ownership uniqueness: every document exactly one Owner row ([GOVERNANCE §3](../core/FRAMEWORK_GOVERNANCE.md)); every knowledge domain exactly one owner ([KNOWLEDGE_SYSTEM §3](../knowledge/KNOWLEDGE_SYSTEM.md)) | Integrity | Zero orphans, zero overlaps |
 | V9 | Every workflow has its reading row (C3.3) and its index row; every message type has all format rows; every E-code cited exists in the matrix | Integrity | Total coverage |
 | V10 | Version sanity: revision history's last row matches the header version | Integrity | Zero mismatches |
+| V11 | No reserved-term synonyms in normative text (glossary R1.4; e.g. *handoff* for *handover*) | Vocabulary | Zero collisions |
 
 Failure of any check is a framework defect: D1/D2 fix by the responsible Maintainer, recorded normally.
 
@@ -72,10 +73,10 @@ What scripts cannot check. Each audit: run by the Architect, findings recorded, 
 
 ## 4. Cadence and the Release Audit Gate
 
-- **Every framework release** (any MAJOR/MINOR): V1–V10 must pass, and the audit record (checks run, results, open findings with dispositions) is part of the release package the Owner approves — **no release ships un-audited**, mirroring G5/G6 at framework level.
+- **Every framework release** (any MAJOR/MINOR): `python3 tools/amf-lint.py` must exit clean, and the audit record (its output plus any judgment-audit findings and dispositions) is part of the release package the Owner approves — **no release ships red**, mirroring G5/G6 at framework level.
 - **Usage audit**: at release planning, over whatever instances exist (§3 last row) — it *is* the evidence-gathering step of the evolution loop.
 - **Judgment audits** (§3 first four): at every MAJOR, and whenever a violation pattern suggests drift.
-- PATCH releases: V1–V10 only.
+- PATCH releases: V1–V11 only.
 
 ## 5. The Evolution Loop (formalized)
 
@@ -103,8 +104,10 @@ From the phase brief, declined with reasons (P9/P10 — revisit on evidence):
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0.0 | 2026-07-13 | Architect (AI), Phase 9 (Governance, Validation, Audit & Evolution) | Initial audit system: V1–V10 checks, audit catalog, release gate, evolution loop |
+| 1.1.0 | 2026-07-16 | Architect (AI), v1.1.0 | V1–V10 now shipped as tools/amf-lint.py; release gate names the command |
+| 1.1.1 | 2026-07-16 | Architect (AI), v1.1.0 self-review | Added V11 (reserved-term guard); strengthened V8 (domain-ownership uniqueness) and V9 (message-type coverage) in the shipped linter |
 
 ## Future Extension Notes
 
-- V1–V10 are `amf lint`'s specification; when tooling lands, §4's release gate becomes CI.
+- V1–V11 shipped as `tools/amf-lint.py` (v1.1.0–1.1.1); §4's release gate is a single command, CI-ready. Judgment audits (§3) remain human. New machine-checkable invariants become V-checks; V11 was promoted from the terminology judgment audit after it caught a real regression.
 - The usage audit grows into the metrics program (architecture §14.2) as instance history accumulates; the maturity model ([AGENT_LIBRARY.md §6](../agents/AGENT_LIBRARY.md)) lands on the same evidence.

@@ -6,7 +6,7 @@
 | Document | CERTIFICATION.md |
 | Module | operations |
 | Class | S — Stable spec |
-| Version | 1.0.0 |
+| Version | 1.1.2 |
 | Status | ACTIVE |
 | Owner | Architect (protocol) / Human Owner (certification grants) |
 | Maintainer | Architect |
@@ -32,7 +32,7 @@ Honest, cumulative, per framework version:
 
 | Level | Meaning | Evidence required |
 |---|---|---|
-| **C0 — Audited** | Statically consistent: all V1–V10 checks pass, judgment audits clean | [FRAMEWORK_AUDIT.md](FRAMEWORK_AUDIT.md) record |
+| **C0 — Audited** | Statically consistent: all V1–V11 checks pass, judgment audits clean | [FRAMEWORK_AUDIT.md](FRAMEWORK_AUDIT.md) record |
 | **C1 — Exercised** | Every mandatory workflow and every instance-document standard has executed at least once in a real project | The reference implementation's instance (§2) |
 | **C2 — Proven** | A real project ran start-to-release under the framework with zero unrecorded deviations, and its post-release review found the framework helped more than it cost | Full compliance record (§3) + Owner's post-release judgment |
 | **C3 — Hardened** | ≥3 projects across ≥2 profiles; KPI history exists; at least one framework MINOR shipped from harvested evidence | Aggregated usage audit |
@@ -81,17 +81,18 @@ After the reference project's first G6 release: a retrospective session ([PLAYBO
 
 Honest status at release (2026-07-13):
 
-- **C0 — Audited: GRANTED.** V1–V10 executed at release: 0 broken links, 0 stale markers, 0 duplicate IDs, registry consistent with headers, headers conformant, ownership total with zero overlaps, workflow/message/E-code coverage total. Judgment audits (duplication, terminology, proportionality) performed during Phase 8 integration; findings fixed in-line (recorded in the revision histories).
+- **C0 — Audited: PREPARED for v1.1.0, pending the Owner's G6.** (1.0.0's C0 stands.) V1–V11 are now **reproducible by anyone**: `python3 tools/amf-lint.py` exits clean across all framework documents (links, markers, IDs, headers, registry↔header consistency, status vocabulary, ownership uniqueness, coverage, versions, reserved-term collisions) and was exercised against injected defects to confirm it fails as designed. The v1.1.0 self-review against the Definition of Done strengthened V8/V9 and promoted V11 from the terminology judgment audit. Evidence is a command, not an assertion (Article IV).
 - **C1–C3: PENDING.** No project has yet run under AMF. The framework is *designed and audited*, not yet *field-proven* — and says so. The paper dry-run ([ADOPTION_GUIDE.md §7](ADOPTION_GUIDE.md)) is orientation, not evidence.
 - **Next step:** R2.1 — the Owner's next real project adopts AMF v1.0.0 as the reference implementation; its harvest drives v1.1.
 
 ## 5. Certification Record
 
-Append-only; one entry per certification event.
+Append-only; one entry per certification event. A row's "Granted by" reads **awaiting Human Owner G6** until the Owner actually approves (Article I) — it is only stamped with the grant after approval, never before.
 
 | Date | Version | Level | Evidence | Granted by |
 |---|---|---|---|---|
 | 2026-07-13 | 1.0.0 | C0 | Release audit record (V1–V10 pass; Phase 8 integration audits) | Human Owner (release approval) |
+| 2026-07-16 | 1.1.0 | C0 (pending) | `amf-lint` clean across 75 documents; terminology audit (1 fix) | **awaiting Human Owner G6** |
 
 ---
 
@@ -100,6 +101,9 @@ Append-only; one entry per certification event.
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0.0 | 2026-07-13 | Architect (AI), Phase 10 (Reference Implementation & Certification) | Initial protocol: levels, reference mandate, evidence model, honest v1.0.0 statement |
+| 1.1.0 | 2026-07-16 | Architect (AI), v1.1.0 | C0 re-granted at v1.1.0; evidence now reproducible via amf-lint; record appended |
+| 1.1.1 | 2026-07-16 | Architect (AI), v1.1.0 self-review | C0 evidence updated for V1–V11 and the DoD self-review (linter exercised against breakage) |
+| 1.1.2 | 2026-07-16 | Architect (AI), v1.1.0 self-review | Corrected premature G6 claim: v1.1.0 C0 is PREPARED, pending Owner approval (Art. I/IV) |
 
 ## Future Extension Notes
 

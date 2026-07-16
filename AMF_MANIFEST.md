@@ -6,7 +6,7 @@
 | Document | AMF_MANIFEST.md |
 | Module | root |
 | Class | S — Stable spec |
-| Version | 1.0.2 |
+| Version | 1.1.0 |
 | Status | ACTIVE |
 | Owner | Orchestrator |
 | Maintainer | Orchestrator (registry) / Architect (structure) |
@@ -28,17 +28,19 @@
 
 ## 1. What This Is
 
-**AMF (AI Multi-Agent Framework) v1.0.0** — an engineering operating system that turns an AI coding agent into a structured engineering organization: seven roles with explicit authority, a per-project memory that survives sessions, ten message types, seven quality gates, eleven workflows, three adoption profiles. Certification status: **C0 — Audited** ([CERTIFICATION.md §4](operations/CERTIFICATION.md)). Identity and mission: [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md). Design rationale: [AMF_ARCHITECTURE.md](AMF_ARCHITECTURE.md) (frozen).
+**AMF (AI Multi-Agent Framework) v1.1.0** — an engineering operating system that turns an AI coding agent into a structured engineering organization: seven roles with explicit authority, a per-project memory that survives sessions, ten message types, seven quality gates, eleven workflows, three adoption profiles. In a hurry, read [QUICK_START.md](QUICK_START.md). Certification status: **C0 — Audited** ([CERTIFICATION.md §4](operations/CERTIFICATION.md)); release notes [CHANGELOG.md](CHANGELOG.md). Identity and mission: [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md). Design rationale: [AMF_ARCHITECTURE.md](AMF_ARCHITECTURE.md) (frozen).
 
 ## 2. Start Here
 
 | You are | Read, in order |
 |---|---|
+| **In a hurry (any operator)** | [QUICK_START.md](QUICK_START.md) — the whole loop on one screen |
 | **A human, new to AMF** | [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md) → [core/AI_CONSTITUTION.md](core/AI_CONSTITUTION.md) → [operations/ADOPTION_GUIDE.md](operations/ADOPTION_GUIDE.md) (incl. its dry-run §7) → skim [core/FRAMEWORK_GLOSSARY.md](core/FRAMEWORK_GLOSSARY.md) |
 | **An AI session working on a project** | Never here first — the project's `CLAUDE.md` → `.amf/INSTANCE.md`, then [core/SESSION_MANAGEMENT.md](core/SESSION_MANAGEMENT.md) (seven stages) with reading budget per [knowledge/CONTEXT_RECONSTRUCTION.md](knowledge/CONTEXT_RECONSTRUCTION.md) |
 | **An AI session working on AMF itself** | [AMF_ARCHITECTURE.md](AMF_ARCHITECTURE.md) (the frozen design contract) → [core/FRAMEWORK_GOVERNANCE.md](core/FRAMEWORK_GOVERNANCE.md) (what may change and how) → the documents your change touches |
 | **Adopting AMF into a project** | [operations/ADOPTION_GUIDE.md](operations/ADOPTION_GUIDE.md) → [operations/PROFILES.md](operations/PROFILES.md) → [workflows/WF_NEW_PROJECT.md](workflows/WF_NEW_PROJECT.md) |
 | **Any operational situation** ("which procedure runs X?") | [operations/PLAYBOOK_INDEX.md](operations/PLAYBOOK_INDEX.md) |
+| **Checking the framework is consistent** | `python3 tools/amf-lint.py` |
 | **Any terminology doubt** | [core/FRAMEWORK_GLOSSARY.md](core/FRAMEWORK_GLOSSARY.md), always |
 
 Reading tiers (T0–T3) and per-workflow reading lists: [knowledge/CONTEXT_RECONSTRUCTION.md](knowledge/CONTEXT_RECONSTRUCTION.md) — the single source of truth for reading order; this manifest never duplicates it. Every official artifact structure: [SCHEMA_REGISTRY.md](SCHEMA_REGISTRY.md).
@@ -63,13 +65,15 @@ Authoritative (R10.6; ownership view: [core/FRAMEWORK_GOVERNANCE.md §3](core/FR
 
 | ID | Document | Class | Version | Status |
 |---|---|---|---|---|
-| ROOT-01 | [AMF_MANIFEST.md](AMF_MANIFEST.md) | S | 1.0.2 | ACTIVE |
-| ROOT-02 | [README.md](README.md) | S | 1.0.0 | ACTIVE |
+| ROOT-01 | [AMF_MANIFEST.md](AMF_MANIFEST.md) | S | 1.1.0 | ACTIVE |
+| ROOT-02 | [README.md](README.md) | S | 1.0.1 | ACTIVE |
 | ROOT-03 | [AMF_ARCHITECTURE.md](AMF_ARCHITECTURE.md) | C | 1.0.0 | ACTIVE (frozen) |
 | ROOT-04 | [SCHEMA_REGISTRY.md](SCHEMA_REGISTRY.md) | S | 1.0.0 | ACTIVE |
-| CORE-01 | [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md) | C | 1.0.5 | ACTIVE |
+| ROOT-05 | [QUICK_START.md](QUICK_START.md) | S | 1.0.1 | ACTIVE |
+| ROOT-06 | [CHANGELOG.md](CHANGELOG.md) | A | 1.0.1 | ACTIVE |
+| CORE-01 | [core/AMF_OVERVIEW.md](core/AMF_OVERVIEW.md) | C | 1.0.6 | ACTIVE |
 | CORE-02 | [core/AI_CONSTITUTION.md](core/AI_CONSTITUTION.md) | C | 1.0.0 | ACTIVE |
-| CORE-03 | [core/FRAMEWORK_GOVERNANCE.md](core/FRAMEWORK_GOVERNANCE.md) | C | 1.0.5 | ACTIVE |
+| CORE-03 | [core/FRAMEWORK_GOVERNANCE.md](core/FRAMEWORK_GOVERNANCE.md) | C | 1.0.6 | ACTIVE |
 | CORE-04 | [core/FRAMEWORK_PRINCIPLES.md](core/FRAMEWORK_PRINCIPLES.md) | C | 1.0.0 | ACTIVE |
 | CORE-05 | [core/FRAMEWORK_RULES.md](core/FRAMEWORK_RULES.md) | C | 1.1.1 | ACTIVE |
 | CORE-06 | [core/FRAMEWORK_GLOSSARY.md](core/FRAMEWORK_GLOSSARY.md) | C | 1.6.0 | ACTIVE |
@@ -81,7 +85,7 @@ Authoritative (R10.6; ownership view: [core/FRAMEWORK_GOVERNANCE.md §3](core/FR
 | KNOW-04 | [knowledge/templates/INSTANCE.md](knowledge/templates/INSTANCE.md) | T | 1.0.1 | ACTIVE |
 | KNOW-05 | [knowledge/templates/PROJECT.md](knowledge/templates/PROJECT.md) | T | 1.0.0 | ACTIVE |
 | KNOW-06 | [knowledge/templates/ARCHITECTURE.md](knowledge/templates/ARCHITECTURE.md) | T | 1.0.0 | ACTIVE |
-| KNOW-07 | [knowledge/templates/ROADMAP.md](knowledge/templates/ROADMAP.md) | T | 1.0.1 | ACTIVE |
+| KNOW-07 | [knowledge/templates/ROADMAP.md](knowledge/templates/ROADMAP.md) | T | 1.0.2 | ACTIVE |
 | KNOW-08 | [knowledge/templates/TASKS.md](knowledge/templates/TASKS.md) | T | 1.0.1 | ACTIVE |
 | KNOW-09 | [knowledge/templates/BACKLOG.md](knowledge/templates/BACKLOG.md) | T | 1.0.2 | ACTIVE |
 | KNOW-10 | [knowledge/templates/DECISIONS.md](knowledge/templates/DECISIONS.md) | T | 1.0.1 | ACTIVE |
@@ -130,12 +134,12 @@ Authoritative (R10.6; ownership view: [core/FRAMEWORK_GOVERNANCE.md §3](core/FR
 | WFLW-12 | [workflows/WF_RECOVERY.md](workflows/WF_RECOVERY.md) | S | 1.0.0 | ACTIVE |
 | OPRN-01 | [operations/ADOPTION_GUIDE.md](operations/ADOPTION_GUIDE.md) | S | 1.0.0 | ACTIVE |
 | OPRN-02 | [operations/PROFILES.md](operations/PROFILES.md) | S | 1.0.0 | ACTIVE |
-| OPRN-03 | [operations/UPGRADE_GUIDE.md](operations/UPGRADE_GUIDE.md) | S | 1.0.0 | ACTIVE |
+| OPRN-03 | [operations/UPGRADE_GUIDE.md](operations/UPGRADE_GUIDE.md) | S | 1.1.0 | ACTIVE |
 | OPRN-04 | [operations/EXTENDING_AMF.md](operations/EXTENDING_AMF.md) | S | 1.0.0 | ACTIVE |
 | OPRN-05 | [operations/ARCHIVING.md](operations/ARCHIVING.md) | S | 1.0.0 | ACTIVE |
 | OPRN-06 | [operations/PLAYBOOK_INDEX.md](operations/PLAYBOOK_INDEX.md) | S | 1.0.0 | ACTIVE |
-| OPRN-07 | [operations/FRAMEWORK_AUDIT.md](operations/FRAMEWORK_AUDIT.md) | S | 1.0.0 | ACTIVE |
-| OPRN-08 | [operations/CERTIFICATION.md](operations/CERTIFICATION.md) | S | 1.0.0 | ACTIVE |
+| OPRN-07 | [operations/FRAMEWORK_AUDIT.md](operations/FRAMEWORK_AUDIT.md) | S | 1.1.1 | ACTIVE |
+| OPRN-08 | [operations/CERTIFICATION.md](operations/CERTIFICATION.md) | S | 1.1.2 | ACTIVE |
 
 ## 5. Registry Maintenance
 
@@ -152,6 +156,7 @@ Authoritative (R10.6; ownership view: [core/FRAMEWORK_GOVERNANCE.md §3](core/FR
 | 1.0.0 | 2026-07-12 | Architect (AI), Phase 8 | Initial manifest: start-here paths, module map, full registry at release v1.0.0 |
 | 1.0.1 | 2026-07-12 | Architect (AI), Phases 6-7 (user briefs) | Registered SCHEMA_REGISTRY (ROOT-04) and AGENT_LIBRARY (AGNT-10); schema pointer added |
 | 1.0.2 | 2026-07-13 | Architect (AI), Phases 8-10 | Registered PLAYBOOK_INDEX, FRAMEWORK_AUDIT, CERTIFICATION (OPRN-06..08); C0 status; situation path |
+| 1.1.0 | 2026-07-16 | Orchestrator (AI), v1.1.0 | Registered QUICK_START (ROOT-05), CHANGELOG (ROOT-06); v1.1.0 status; registry regenerated |
 
 ## Future Extension Notes
 

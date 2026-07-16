@@ -6,7 +6,7 @@
 | Document | AMF_OVERVIEW.md |
 | Module | core |
 | Class | C — Constitutional |
-| Version | 1.0.5 |
+| Version | 1.0.6 |
 | Status | ACTIVE |
 | Owner | Human Owner |
 | Maintainer | Architect |
@@ -106,7 +106,7 @@ The [Manifest](../AMF_MANIFEST.md) is the entry point; orientation paths:
 
 ## 8. Composition and Status
 
-AMF v1.0 comprises 66 normative documents across the seven modules plus root (inventory: [../AMF_ARCHITECTURE.md](../AMF_ARCHITECTURE.md) §7), built in eight phases (§16 there). Current position: **all phases complete — AMF v1.0.0 released** (gate G6, Human Owner approval). All seven modules, the Manifest and the Schema Registry are ACTIVE; certification status C0 — Audited ([CERTIFICATION.md](../operations/CERTIFICATION.md)).
+AMF v1.0 comprises 66 normative documents across the seven modules plus root (inventory: [../AMF_ARCHITECTURE.md](../AMF_ARCHITECTURE.md) §7), built in eight phases (§16 there). Current position: **AMF v1.1.0 released** (2026-07-16) — all phases complete plus an operable-tooling release (`amf-lint`, QUICK_START, framework changelog). All seven modules, the Manifest and the Schema Registry are ACTIVE; certification status C0 — Audited ([CERTIFICATION.md](../operations/CERTIFICATION.md)); release notes [CHANGELOG.md](../CHANGELOG.md).
 
 ---
 
@@ -120,6 +120,7 @@ AMF v1.0 comprises 66 normative documents across the seven modules plus root (in
 | 1.0.3 | 2026-07-12 | Architect (AI), Phase 4-5 | Module map: communication and quality ACTIVE (D1 registry edits) |
 | 1.0.4 | 2026-07-12 | Architect (AI), Phase 8 | Module map complete; v1.0.0 release recorded; swept Phase 6-8 references (R8.3) |
 | 1.0.5 | 2026-07-13 | Architect (AI), Phases 8-10 | Operations module completed through Phase 10; certification status recorded |
+| 1.0.6 | 2026-07-16 | Architect (AI), v1.1.0 | Recorded v1.1.0 release position |
 
 ## Future Extension Notes
 

@@ -6,7 +6,7 @@
 | Document | templates/ROADMAP.md |
 | Module | knowledge |
 | Class | T — Template |
-| Version | 1.0.1 |
+| Version | 1.0.2 |
 | Status | ACTIVE |
 | Owner | Architect |
 | Maintainer | Architect |
@@ -46,7 +46,7 @@
 3. **Milestones** — table per milestone: name · target date (or "unscheduled") · definition of reached · goals served (G-refs) · status (PLANNED / ACTIVE / REACHED / MOVED-with-D-ref).
 4. **Direction notes** — the PA's reading of where this is going; explicitly non-binding.
 
-Rules: milestone dates move only with a recorded reason (E29 entry cites what moved it — a D-NNN for scope-driven moves, otherwise the session); "reached" is defined *when the milestone is created*, not when it is claimed (Article X spirit); milestones are named plainly ("Public launch", "Client handoff") — no versions here, versions belong to releases.
+Rules: milestone dates move only with a recorded reason (E29 entry cites what moved it — a D-NNN for scope-driven moves, otherwise the session); "reached" is defined *when the milestone is created*, not when it is claimed (Article X spirit); milestones are named plainly ("Public launch", "Client delivery") — no versions here, versions belong to releases.
 
 ## Skeleton
 
@@ -83,7 +83,7 @@ Rules: milestone dates move only with a recorded reason (E29 entry cites what mo
 
 ## Maintenance Notes
 
-Small client projects often have exactly two milestones ("launch", "handoff") — that is a complete roadmap; do not pad it (P9). The document earns its place when the Owner asks "when?": the answer should already be here.
+Small client projects often have exactly two milestones ("launch", "delivery") — that is a complete roadmap; do not pad it (P9). The document earns its place when the Owner asks "when?": the answer should already be here.
 
 ## Revision History
 
@@ -91,6 +91,7 @@ Small client projects often have exactly two milestones ("launch", "handoff") �
 |---|---|---|---|
 | 1.0.0 | 2026-07-12 | Architect (AI), Phase 2 | Initial standard: three-horizon model, milestone rules |
 | 1.0.1 | 2026-07-12 | Architect (AI), Phase 8 | Swept Phase 6-8 forward references to live links (R8.3) |
+| 1.0.2 | 2026-07-16 | Architect (AI), v1.1.0 | Milestone examples: 'Client handoff' -> 'Client delivery' (term-collision fix) |
 
 ## Future Extension Notes
 

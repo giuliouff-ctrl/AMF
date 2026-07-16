@@ -6,7 +6,7 @@
 | Document | UPGRADE_GUIDE.md |
 | Module | operations |
 | Class | S — Stable spec |
-| Version | 1.0.0 |
+| Version | 1.1.0 |
 | Status | ACTIVE |
 | Owner | Release Manager (content) / Architect (structure) |
 | Maintainer | Release Manager |
@@ -56,9 +56,17 @@ Runs as a [WF_MAINTENANCE.md](../workflows/WF_MAINTENANCE.md) session (E28 path)
 
 Format per entry (fixed): **What changed · Why · Steps (mechanical, ordered) · End-state checklist · Rollback specifics** — one entry per breaking or instance-relevant change, grouped by version, newest first.
 
+### v1.1.0 — operable & checkable
+
+**What changed:** additive only — new operator tooling (`tools/amf-lint.py`), a one-page [QUICK_START.md](../QUICK_START.md), and a framework-level [CHANGELOG.md](../CHANGELOG.md). One documentation fix (ROADMAP milestone example wording).
+**Why:** make daily operation faster and the framework machine-checkable.
+**Steps:** none. No instance document standard changed; the instance directory contract is untouched (compatibility promise intact, [VERSIONING.md §6](../core/VERSIONING.md)).
+**End-state:** bump `amf_version` to 1.1.0 in INSTANCE.md if you want the newer tooling referenced; instances may also stay on 1.0.0 indefinitely — 1.1.0 changes nothing they depend on.
+**Rollback:** revert the pin; nothing else to undo.
+
 ### v1.0.0 — baseline
 
-Initial release. No migrations exist or can exist (nothing precedes it). Instances adopted on 1.0.0 are the baseline population; the first entries land here with the first release that changes anything instance-visible.
+Initial release. No migrations exist or can exist (nothing precedes it). Instances adopted on 1.0.0 are the baseline population.
 
 ---
 
@@ -67,6 +75,7 @@ Initial release. No migrations exist or can exist (nothing precedes it). Instanc
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 1.0.0 | 2026-07-12 | Architect (AI), Phase 7 | Initial procedure, verification, empty register at baseline |
+| 1.1.0 | 2026-07-16 | Architect (AI), v1.1.0 | Added v1.1.0 migration note (additive; no instance action required) |
 
 ## Future Extension Notes
 
